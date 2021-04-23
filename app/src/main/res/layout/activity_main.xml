@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Homepage">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sort_imageview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:src="@drawable/ic_arrow_up_24"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/sort_reverse_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sort_reverse_button" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/sort_reverse_button"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="48dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:src="@mipmap/ic_arrange"
+        android:text="@string/sort_text"
+        android:textAlignment="textEnd"
+        android:textSize="@dimen/action_text"
+        app:layout_constraintEnd_toStartOf="@id/sort_imageview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/header_textview"
+        android:layout_width="185dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:padding="@dimen/small_padding"
+        android:text="@string/header_text"
+        android:textAlignment="textStart"
+        android:textSize="@dimen/data_text"
+        app:layout_constraintBottom_toBottomOf="@id/sort_reverse_button"
+        app:layout_constraintEnd_toStartOf="@id/sort_reverse_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sort_reverse_button" />
+
+    <View
+        android:id="@+id/sort_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sort_reverse_button" />
+
+    <TextView
+        android:id="@+id/empty_results_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:padding="@dimen/small_padding"
+        android:text="@string/no_steps_found_text"
+        android:textSize="@dimen/data_text"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sort_divider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/steps_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/medium_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sort_reverse_button"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_summary" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/header_textview"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_journal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
