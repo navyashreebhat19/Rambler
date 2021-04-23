@@ -21,3 +21,5 @@ The project has two modules - Activities, Modules
 
 
 
+![Screenshot_20200710-162548](https://user-images.githubusercontent.com/54271032/115828311-266a9400-a42b-11eb-85f9-72ae8b38dcc6.png)
+<img src="https://user-images.githubusercontent.com/54271032/115828299-24083a00-a42b-11eb-8cca-79042d9d533a.png" width = "150" height = "270"/>
